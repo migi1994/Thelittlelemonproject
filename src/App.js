@@ -1,11 +1,17 @@
 
 import './App.css';
-
+ import Header from './Component/Header';
+ import Nav from './Component/Nav';
+ import Main from './Component/Main';
+ import Footer from './Component/Footer';
 function App() {
   return (
-    <div>
-        Homepage1
-    </div>
+    <>
+         <Header/>
+         <Nav/>
+         <Main/>
+         <Footer/>
+    </>
   );
 }
 
