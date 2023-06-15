@@ -28,9 +28,9 @@ import React from 'react'
   return (
     <>
       <ul   style = {navigation}>
-        <li ><a href ="#home"style={navigation_li}>HOME</a></li>
-        <li><a href ="#about" style={navigation_li}>ABOUT</a></li>
-        <li ><a href ="#menu"style={navigation_li}>MENU</a></li>
+        <li ><a href ="/Homepage"style={navigation_li}>HOME</a></li>
+        <li><a href ="/CalltoAction" style={navigation_li}>CalltoAction</a></li>
+        <li ><a href ="/Specials"style={navigation_li}>Specials</a></li>
         <li ><a href ="#reservation"style={navigation_li}>RESERVATION</a></li>
         <li ><a href ="#order online"style={navigation_li}>ORDER ONLINE</a></li>
         <li ><a href ="#login"style={navigation_li}>LOGIN</a></li>

@@ -1,5 +1,12 @@
 import React from 'react'
  import restauranfood from './images/restauranfood.jpg'
+ import { Routes , Route } from 'react-router-dom'
+ import Homepage from './Homepage'
+ import CalltoAction from './CalltoAction'
+ import Specials from './Specials'
+  import CustomerSay from './CustomerSay'
+  import Chicago from './Chicago'
+  import BookingPage from './BookingPage'
  function Main() {
      const main={ 
          display:"flex",
@@ -9,11 +16,12 @@ import React from 'react'
            backgroundColor:"#495E57"
      }
        const image={
-          
+            
               marginTop:"-17rem",
               marginLeft:"52rem",
-           width:"348px",
-           height:"404px",
+              
+               width:"348px",
+               height:"404px",
          
       
            borderRadius:"30px",
@@ -80,7 +88,27 @@ import React from 'react'
 
       <span style={mainbutton}>Reserve a Table </span> 
        <img src={restauranfood} style={image} alt="food"/>
+    
+    
+      <Routes>
+        <Route path='' element={  <Homepage/>}/>
+        <Route path='/CalltoAction' element={   <CalltoAction/>}/>
+      <Route path='/Specials' element={    <Specials/>}/>
+        <Route path='/CustomerSay' element={    <CustomerSay/>}/>
+        <Route path='/Chicago' element={    <Chicago/>}/>
+        <Route path='/BookingPage' element={     <BookingPage/>}/>
+</Routes> 
+    
     </div>
-  )
+
+
+ 
+
+
+
+
+);
+
+    
 }
 export default Main
