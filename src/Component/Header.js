@@ -15,7 +15,7 @@
           }
       return (
         <>
-          <img src={Logo}  style={logo}alt="sdfa"/>
+          <img src={Logo}  style={logo}alt="logo"/>
         </>
       )
     }

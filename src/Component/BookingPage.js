@@ -1,11 +1,25 @@
+
+import BookForm from './BookForm'
+import { useState } from 'react'
+
+
 import React from 'react'
 
-function BookingPage() {
+function BookingPage(props) {
+  
   return (
-    <div>BookingPage</div>
+      
+   
+    <div> 
+        
+         
+        
+        
+         <BookForm 
+         avilableTimes={props.avilableTimes}
+         setAvilableTimes={props.setAvilableTimes}
+         /></div>
   )
 }
 
 export default BookingPage
-
-

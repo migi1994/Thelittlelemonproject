@@ -1,14 +1,17 @@
 import React from 'react'
 import card1img from './images/Rectangle 14.png'
 import deliveryguy from './images/deliveryguy.png'
+import greekSalad from './images/greek salad.jpg'
+import Lemondessert from './images/lemon dessert.jpg'
 function Specials() {
 
      const  cards ={
            display:"flex",
            flexWrap:"wrap" ,
            justifyContent:"space-around",
-           height:"59rem",
-            marginTop:"10rem",
+           height:"39rem",
+            marginTop:"5rem",
+            paddingBottom:"5rem"
            
          
      }
@@ -21,7 +24,7 @@ function Specials() {
             textDecoration:"none",
             padding:".5rem 2rem .5rem 2rem",
             color:"black",
-            marginLeft:"60rem",
+            marginLeft:"69rem",
             borderRadius:"10px",
      }
 
@@ -198,10 +201,10 @@ function Specials() {
 
       <div className ="specials_card1" >
 
-        <img src={card1img} style={card1img1}/>
+        <img src={greekSalad} style={card1img1}/>
        
         <h4 style={card1h4}>Greek salad</h4>
-          <h6 style={card1h6}>$12.22</h6> 
+          <h6 style={card1h6}>$12.99</h6> 
              <p style={card1p}>Lorem ipsum dolor sit amet,<br/>
                 consectetur adipiscing elit,<br/>
                 sed do eiusmod tempor incididunt<br/>
@@ -215,7 +218,7 @@ function Specials() {
             <img src={card1img} style={card2img1}/>
        
        <h4 style={card2h4}>Greek salad</h4>
-         <h6 style={card2h6}>$12.22</h6> 
+         <h6 style={card2h6}>$5.99</h6> 
             <p style={card2p}>Lorem ipsum dolor sit amet,<br/>
                consectetur adipiscing elit,<br/>
                sed do eiusmod tempor incididunt<br/>
@@ -225,10 +228,10 @@ function Specials() {
            <img src={deliveryguy} style={card2img2}/>
            </div>
        <div className ="specials_card3" >
-       <img src={card1img} style={card3img1}/>
+       <img src={Lemondessert} style={card3img1}/>
        
        <h4 style={card3h4}>Greek salad</h4>
-         <h6 style={card3h6}>$12.22</h6> 
+         <h6 style={card3h6}>$5.00</h6> 
             <p style={card3p}>Lorem ipsum dolor sit amet,<br/>
                consectetur adipiscing elit,<br/>
                sed do eiusmod tempor incididunt<br/>
