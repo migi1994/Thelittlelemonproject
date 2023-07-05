@@ -6,7 +6,7 @@ import restaurantfood from './images/restauranfood.jpg'
              justifyContent:"center",
             height:"20rem",
             backgroundColor:"#D9D9D9",
-            marginTop:"120rem"
+            
            
         }
         const footerimg ={

@@ -1,31 +1,50 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import restaurant from './images/restaurant.jpg'
-
-
+import ConfirmedBooking from './confirmedBooking'
+import { useNavigate } from 'react-router-dom'
+import confirmedBooking from './confirmedBooking'
 
 function BookForm(props) {
-  
+
+   const navigate = useNavigate()
+    const [date  , setDate]=useState()
     const [time  , setTime]=useState("17:00")
     const [guest  , setGuest]=useState("1")
     const [occasion  , setOccation]=useState("Birthday")
-
-
-     const  submitHandler=(e)=>{
-         e.preventDefault()
-
-     }
-     const  handelDateChange=(e)=>{
+     const [formData , setFormData] = useState({
+      date : "",
+      time:"",
+      guest:""
+   })
+   
+  
     
-          const selectedDate=e.target.value
-      props.dispatch ({type:'UpdateTime', date : selectedDate})
-    
-     }
+ 
+
+          const  submitHandler=(e)=>{
+          
+                e.preventDefault() 
+                 const{date:value}=e.target;
+               setFormData({...formData,[date]:value});
+                navigate('/ConfirmedBooking')
+                console.log("clicked")
+          }
+
+
+//     const  submitHandler=(event)=>{
+//          event.preventDefault();
+//          setIput("")
+//          setDate(props.updateTime)
+//          console.log("submited")
+      
+// }
+
   
   const formContainer={
               display:" flex",
               flexDirection:"column",
-              marginTop:"20rem"
+              marginTop:"8rem"
               
             
            
@@ -119,15 +138,27 @@ const Occasionselect={
 
 }
 
-const button={
-     border:"none",
-     padding:".7rem 2.5rem ",
-     backgroundColor:"#F8B025",
-     borderRadius:"21px",
-       marginLeft:"-1rem",
-       marginTop:"3rem",
+const button={ 
+      display:"flex",
+      justifyContent:"center",
+      borderColor:"#F8B025",
+      padding:".7rem 1rem .7rem 1rem",
+      backgroundColor:"#F8B025",
+      borderRadius:"10px",
+      marginLeft:"1rem",
+      marginTop:"12rem",
+        cursor:"pointer"
+   
+     
        
 }
+
+// const buttona={
+  
+//         textDecoration:"none",
+         
+//         color:"black"
+// }
 const reservetable={
   position:"absolute",
   fontFamily:"Merkazi",
@@ -136,52 +167,70 @@ const reservetable={
    marginTop:"23rem"
   
 }
+   const avilablet={
+     
+         marginLeft:"-3rem",
+         paddingTop:"1rem",
+         border:"2px solid red",
+         listStyle:"none",
+         padding:"8rem 9rem",
+         backgroundColor:"#F8B025"
+   }
+ const  ulContainer={
+       display:"flex",
+       justifyContent:"center",
+      
+ }
 
 return (
   <>
-          
-   <div style={formContainer} >
 
+  
+    
+       <ul style={ulContainer}>
+           <li style={avilablet}>{props.avilableTimes}</li>
+  </ul>
+         
+     <div style={formContainer} >
    <img src={restaurant} style={formimg}/>
    <h2 style={reservetable}>RESERVE YOUR TABLE</h2>
-  <form style={form} 
-   onSubmit={submitHandler}>
+
+
+    
+
+
+
   
 
- <label htmlFor="res-date"  
-      
- onChange={handelDateChange}
- style={choosedate} >Choose date</label>
 
+
+<form onSubmit={submitHandler}  style={form}>
  
 
- <input style={dateinput}  type="date" id="res-date"/>
- <label htmlFor="res-time" style={choosetime}>Choose time</label>
+
+ <label htmlFor="res-date" style={choosedate}  >Choose date</label>
+ <input
+   type="date" id="res-date"
+   style={dateinput}
+   onChange={e=>setDate(e.target.value)}
+/>
+   
+ 
+
+ 
+  <label style={choosetime}>Choose time</label>
  <select id="res-time" 
  style={timeinput}
  value={time}
  onChange={e=>setTime(e.target.value)}>
-            {props.avilableTimes.map((time)=>( 
+             {props.avilableTimes?.map((time)=>( 
                 <option  key={time}> {time}</option>
            ))} 
-  
-  {/* <option>{props.avilableTimes[0]}</option>  */}
-  {/* <option>{props.avilableTimes}</option>  */}
-  {/* <option>{props.avilableTimes[2]}</option> 
-  <option>{props.avilableTimes[3]}</option> 
-  <option>{props.avilableTimes[4]}</option>  */}
-
-
-    {/* <option>18:00</option>
-    <option>19:00</option>
-    <option>20:00</option>
-    <option>21:00</option>
-    <option>22:00</option> */}
- </select>
+  </select>
 
 
  <label 
- htmlFor="guests" style={Numberguest}>Number of guests</label>
+ style={Numberguest}>Number of guests</label>
  <input 
  type="number" 
  placeholder="1" 
@@ -190,7 +239,7 @@ return (
   style={Numberinput}
   value={guest}
   onChange={e=>setGuest(e.target.value)}/>
- <label htmlFor="occasion"style={Occasion}>Occasion</label>
+ <label style={Occasion}>Occasion</label>
  <select 
  id="occasion" 
  style={Occasionselect}
@@ -198,13 +247,33 @@ return (
   onChange={e=>setOccation(e.target.value)}>
     <option>Birthday</option>
     <option>Anniversary</option>
- </select>
- <input type="submit" value="Make Your reservation" style={button}/>
+ </select> 
+
+ 
+
+
+
+
+   <button style={button} 
+   onClick={(()=>props.dispatch({type:"update"}))} >Make Your reservation</button>
+
+
+  {/* <span  type="submit" 
+ style={button}><a value="submit" href='#' 
+ style={buttona} 
+ onClick={(()=>props.dispatch({type:"update"}))}  >Make Your reservation</a> </span> */} 
 
   
-  </form>
+  </form> 
   </div>
-  </>
+
+
+   {/* <ConfirmedBooking 
+  date ={date}
+  time={time}
+  guest={guest}/> */}
+
+  </> 
 )
 }
 

@@ -10,7 +10,7 @@ function Specials() {
            flexWrap:"wrap" ,
            justifyContent:"space-around",
            height:"39rem",
-            marginTop:"5rem",
+            marginTop:"12rem",
             paddingBottom:"5rem"
            
          
@@ -25,13 +25,14 @@ function Specials() {
             padding:".5rem 2rem .5rem 2rem",
             color:"black",
             marginLeft:"69rem",
-            borderRadius:"10px",
+            borderRadius:"10px",   
      }
 
          const special_header={
               marginLeft:"6rem",
               fontFamily:"karla",
                fontSize:"20px",
+               marginTop:"6rem"
          }
 
 

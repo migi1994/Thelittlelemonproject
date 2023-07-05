@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState , useReducer } from 'react'
+import {  useReducer } from 'react'
  import restauranfood from './images/restauranfood.jpg'
  import { Routes , Route } from 'react-router-dom'
  import Homepage from './Homepage'
@@ -8,52 +8,102 @@ import { useState , useReducer } from 'react'
   import CustomerSay from './CustomerSay'
   import Chicago from './Chicago'
   import BookingPage from './BookingPage'
+   import { fetchAPI ,submitAPI } from './Api'
+   import ConfirmedBooking from './confirmedBooking'
+  //  import { useNavigate } from 'react-router-dom';
+  
  
-  
 
 
-  
+    
+   
+
+ 
+
+
+
+  const reducer =(state , action)=>{
+       switch(action.type){
+        case "initial":
+          return {initializeTimes:state.initializeTimes()};
+       
+         case "update":
+          return {updateTimes:state.updateTimes()}
+      
+       default : throw  new Error();
+  }
+    }
   
   
   
   function updateTimes(){
  
- 
-   return[
-        '11:00 AM',
-        '2:30 PM',
-        '4:00 PM',
-        '5:30 PM',
-        '6:40 PM',
-        '7:00 PM',
-        '8:30 PM',
-        '9:30 PM',
-        '10:00 PM',
-  ]
+
+   return [
+    '12:30 PM',
+     '1:00 PM',
+     '2:30 PM',
+     '3:40 PM',
+
+   ]
   }
-    function initializeTimes(){
-       return [  
-       '11:00 AM',
-       '12:30 PM',
-       '1:00 PM',
-       '2:30 PM',
-       '3:40 PM',
-       '5:00 PM',
-       '5:30 PM',
-       '6:30 PM',
-       '7:00 PM',
-      ]
-    
-    }
+
+  
+    // function initializeTimes(){
+    //    return [  
+    //    '11:00 AM',
+    //    
+    //    '5:00 PM',
+    //    '5:30 PM',
+    //    '6:30 PM',
+    //    '7:00 PM',
+    //   ]
+         
+ 
+
+   // }
    
-
-
+    export const initializeTimes = () => {
+      let reservations = JSON.parse(localStorage.getItem('reservations')) || [];
+      const reservedTimes = reservations.filter(reservation => reservation.update === reservation.update)
+                                        .map(reservation => reservation.update);
+      const availableTimes = fetchAPI(new Date());
+      let updatedTimes = availableTimes.filter(date => !reservedTimes.includes(date));
+      return updatedTimes;
+    };
+  
 
   function Main() {
 
+    // const navigate = useNavigate();
+
+
+      //  const submitForm =async ()=>{
+         
+      //      const apiResponse =  submitAPI()
+      //      if (apiResponse === true){
+
+           
+          
+      //  }
+      //  else {
+      //     console.log("error")
+      //  }
+
+
+
+
+
+
+
+      // }
+
+
+     
+const [avilableTimes ,dispatch]=useReducer(updateTimes, null ,initializeTimes)
    
 
-  const [state ,dispatch]=useReducer(updateTimes, null ,initializeTimes)
+  
   
 
   
@@ -141,20 +191,34 @@ import { useState , useReducer } from 'react'
       <span style={mainbutton}>Reserve a Table </span> 
        <img src={restauranfood} style={image} alt="food"/>
     
-
-         {/* <Specials/>
-         <CustomerSay/>
-         <Chicago/>     */}
-
+ 
+          
+         
+         
+        
+     
     
-      <Routes>
-        <Route path='' element={  <Homepage/>}/>
-        <Route path='/BookingPage' element={<BookingPage  
+       <Routes>
+     
+       <Route path="/" element={<Homepage />} />
+       <Route path="/about" element={ <Specials/> } />
+       <Route path="/customerSay" element={ <CustomerSay/>} />  
+       <Route path="/onlineorder" element={<Chicago/>} />
+      
+            
+            
+      
+        <Route path='/bookingPage' element={<BookingPage  
          avilableTimes={avilableTimes}
-         initializeTimes={avilableTimes}
-         dispatch={dispatch}
-        />}/>
-</Routes> 
+         initializeTimes={initializeTimes}
+         dispatch={dispatch}   />}/>
+          <Route path="/confirmedBooking" element={<ConfirmedBooking 
+            
+          />}
+          
+     />
+       
+</Routes>  
     
     </div>
 
