@@ -8,8 +8,9 @@ import { useState } from 'react';
  import Specials from './Component/Specials';
  import CustomerSay from './Component/CustomerSay';
  import Chicago from './Component/Chicago';
+import { Routes, Route } from 'react-router-dom';
 
-
+import Homepage from './Component/Homepage';
 
  function App() {
  
@@ -18,11 +19,20 @@ import { useState } from 'react';
   return (
     <>  
      
-          <Nav/>
-          <Header/>
+           <Nav/>
+           <Header/>
             <Main/>
-     
-          <Footer/>  
+            <Routes>
+            <Route path="/" element={<Homepage />} />
+       <Route path="menu" element={ <Specials/> } />
+       <Route path="/customerSay" element={ <CustomerSay/>} />  
+       <Route path="about" element={<Chicago/>} />
+      
+            </Routes>
+
+
+
+       
        
  
     

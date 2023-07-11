@@ -88,8 +88,8 @@ const footerSocialsli={
            <img src={restaurantfood} style={footerimg}/>
             <h4 style = {navheader}>navigation</h4>
            <ul   style = {footerNav}>
-        <li ><a href ="/Homepage"style = {footerli}>HOME</a></li>
-        <li><a href ="/" style = {footerli}>ABOUT</a></li>
+        <li ><a href ="/"style = {footerli}>HOME</a></li>
+        <li><a href ="/abut" style = {footerli}>ABOUT</a></li>
         <li ><a href ="/Specials"style = {footerli}>MENU</a></li>
         <li ><a href ="/CustomerSay"style = {footerli}>RESERVATION</a></li>
         <li ><a href ="#order online"style = {footerli}>ORDER ONLINE</a></li>

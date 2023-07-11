@@ -200,12 +200,7 @@ const [avilableTimes ,dispatch]=useReducer(updateTimes, null ,initializeTimes)
     
        <Routes>
      
-       <Route path="/" element={<Homepage />} />
-       <Route path="/about" element={ <Specials/> } />
-       <Route path="/customerSay" element={ <CustomerSay/>} />  
-       <Route path="/onlineorder" element={<Chicago/>} />
-      
-            
+
             
       
         <Route path='/bookingPage' element={<BookingPage  

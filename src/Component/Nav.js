@@ -34,7 +34,7 @@ import { Link } from 'react-router-dom'
           <Link to="/"style={navigation_li}>HOME</Link></li>
         
         <li >
-          <Link to=""style={navigation_li}>ABOUT</Link></li>
+          <Link to="about"style={navigation_li}>ABOUT</Link></li>
        
         <li  >
           <Link to ="/menu"style={navigation_li}>  MENU  </Link>   </li>
