@@ -3,6 +3,7 @@ import card1img from './images/Rectangle 14.png'
 import deliveryguy from './images/deliveryguy.png'
 import greekSalad from './images/greek salad.jpg'
 import Lemondessert from './images/lemon dessert.jpg'
+import Footer from './Footer'
 function Specials() {
 
      const  cards ={
@@ -196,7 +197,7 @@ function Specials() {
    return (
     <>
       <h3 style={special_header}>This week Specials</h3> 
-      <span><a  href="#" style={ online_menu_btn}>Online Menu</a></span>
+   
 
       <div className ="allCards" style={cards}>
 
@@ -243,7 +244,7 @@ function Specials() {
            </div>
        
           </div>
-       
+     
     </>
   )
 }

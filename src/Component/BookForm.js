@@ -9,13 +9,14 @@ function BookForm(props) {
 
    const navigate = useNavigate()
     const [date  , setDate]=useState()
-    const [time  , setTime]=useState("17:00")
-    const [guest  , setGuest]=useState("1")
-    const [occasion  , setOccation]=useState("Birthday")
+    const [time  , setTime]=useState("")
+    const [guests  , setGuests]=useState("")
+    const [occasion  , setOccation]=useState("")
      const [formData , setFormData] = useState({
       date : "",
       time:"",
-      guest:""
+      guests:"",
+      occasion:""
    })
    
   
@@ -27,8 +28,19 @@ function BookForm(props) {
                 e.preventDefault() 
                  const{date:value}=e.target;
                setFormData({...formData,[date]:value});
-                navigate('/ConfirmedBooking')
+                navigate('/ConfirmedBooking',{ state:  {
+                  
+                   date,
+                   time,
+                   guests,
+                   occasion
+                  }
+                }
+                  
+                  )
+               
                 console.log("clicked")
+               
           }
 
 
@@ -186,10 +198,10 @@ return (
   <>
 
   
-    
-       <ul style={ulContainer}>
+{/*     
+        <ul style={ulContainer}>
            <li style={avilablet}>{props.avilableTimes}</li>
-  </ul>
+  </ul>  */}
          
      <div style={formContainer} >
    <img src={restaurant} style={formimg}/>
@@ -237,14 +249,15 @@ return (
  min="1" max="10"
   id="guests" 
   style={Numberinput}
-  value={guest}
-  onChange={e=>setGuest(e.target.value)}/>
+  value={guests}
+  onChange={e=>setGuests(e.target.value)}/>
  <label style={Occasion}>Occasion</label>
  <select 
  id="occasion" 
  style={Occasionselect}
  value={occasion}
-  onChange={e=>setOccation(e.target.value)}>
+  onChange={e=>setOccation(e.target.value)}
+  >
     <option>Birthday</option>
     <option>Anniversary</option>
  </select> 
@@ -268,10 +281,8 @@ return (
   </div>
 
 
-   {/* <ConfirmedBooking 
-  date ={date}
-  time={time}
-  guest={guest}/> */}
+    {/* <ConfirmedBooking  /> */}
+
 
   </> 
 )

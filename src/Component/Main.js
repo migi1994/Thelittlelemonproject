@@ -100,7 +100,7 @@ import {  useReducer } from 'react'
 
 
      
-const [avilableTimes ,dispatch]=useReducer(updateTimes, null ,initializeTimes)
+const [avilableTimes ,dispatch]=useReducer(updateTimes, reducer ,initializeTimes)
    
 
   
@@ -167,10 +167,17 @@ const [avilableTimes ,dispatch]=useReducer(updateTimes, null ,initializeTimes)
                 backgroundColor:"#FBC307",
                 marginLeft:"13rem",
                 textAlign:"center",
-                marginTop:"2rem"
+                marginTop:"2rem",
+                cursor:"Pointer",
+             
+             
              
          }
-
+         const mainbutton_a= {
+          textDecoration:"none",
+          color:"black"
+         }
+     
 
               
   return (
@@ -187,8 +194,8 @@ const [avilableTimes ,dispatch]=useReducer(updateTimes, null ,initializeTimes)
          veniam, quis nostrud exercitation ullamco laboris nisi<br/>
           ut aliquip ex ea commodo consequat. Duis aute irure dolor<br/>
              </p>
-
-      <span style={mainbutton}>Reserve a Table </span> 
+    
+     <button style={mainbutton}><a href='/bookingPage' style={mainbutton_a}> Reserve a Table </a></button>
        <img src={restauranfood} style={image} alt="food"/>
     
  
