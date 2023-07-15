@@ -203,7 +203,7 @@ function Specials() {
 
       <div className ="specials_card1" >
 
-        <img src={greekSalad} style={card1img1}/>
+        <img src={greekSalad} alt ="greekSalad"style={card1img1}/>
        
         <h4 style={card1h4}>Greek salad</h4>
           <h6 style={card1h6}>$12.99</h6> 
@@ -213,26 +213,26 @@ function Specials() {
                 
               </p>
       <h5 style={card1h5}>Order a delivery</h5>
-            <img src={deliveryguy} style={card1img2}/>
+            <img src={deliveryguy} alt="deliveryguy" style={card1img2}/>
             </div>
 
             <div className ="specials_card2" >
-            <img src={card1img} style={card2img1}/>
+            <img src={card1img} alt ="bruchetta"   style={card2img1}/>
        
-       <h4 style={card2h4}>Greek salad</h4>
+       <h4 style={card2h4}>bruchetta</h4>
          <h6 style={card2h6}>$5.99</h6> 
             <p style={card2p}>Lorem ipsum dolor sit amet,<br/>
                consectetur adipiscing elit,<br/>
                sed do eiusmod tempor incididunt<br/>
                
-             </p>
+             </p> 
      <h5 style={card2h5}>Order a delivery</h5>
-           <img src={deliveryguy} style={card2img2}/>
+           <img src={deliveryguy} alt="deliveryguy" style={card2img2}/>
            </div>
        <div className ="specials_card3" >
-       <img src={Lemondessert} style={card3img1}/>
+       <img src={Lemondessert} alt="Lemondessert" style={card3img1}/>
        
-       <h4 style={card3h4}>Greek salad</h4>
+       <h4 style={card3h4}>lemon dessert</h4>
          <h6 style={card3h6}>$5.00</h6> 
             <p style={card3p}>Lorem ipsum dolor sit amet,<br/>
                consectetur adipiscing elit,<br/>
@@ -240,7 +240,7 @@ function Specials() {
                
              </p>
      <h5 style={card3h5}>Order a delivery</h5>
-           <img src={deliveryguy} style={card3img2}/>
+           <img src={deliveryguy} alt="deliveryguy" style={card3img2}/>
            </div>
        
           </div>

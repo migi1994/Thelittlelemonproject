@@ -1,34 +1,41 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import restaurant from './images/restaurant.jpg'
-import ConfirmedBooking from './confirmedBooking'
-import { useNavigate } from 'react-router-dom'
-import confirmedBooking from './confirmedBooking'
+ import ConfirmedBooking from './confirmedBooking'
+import { MemoryRouter, useNavigate } from 'react-router-dom'
+import { Routes,Route } from 'react-router-dom'
+
 
 function BookForm(props) {
-
-   const navigate = useNavigate()
+  
+ 
     const [date  , setDate]=useState()
     const [time  , setTime]=useState("")
     const [guests  , setGuests]=useState("")
     const [occasion  , setOccation]=useState("")
+  
      const [formData , setFormData] = useState({
       date : "",
       time:"",
       guests:"",
-      occasion:""
-   })
-   
-  
-    
- 
+      occasion:"",
+       
 
+   })
+  
+
+   const navigate = useNavigate()
+
+   const isDisabled=Number(guests)< 1 
+    
+       
           const  submitHandler=(e)=>{
-          
+         
                 e.preventDefault() 
                  const{date:value}=e.target;
-               setFormData({...formData,[date]:value});
-                navigate('/ConfirmedBooking',{ state:  {
+               setFormData({...formData,[date]:value });
+             
+                navigate('/confirmedBooking',{ state:  {
                   
                    date,
                    time,
@@ -38,10 +45,10 @@ function BookForm(props) {
                 }
                   
                   )
+              }
+              
                
-                console.log("clicked")
-               
-          }
+          
 
 
 //     const  submitHandler=(event)=>{
@@ -174,25 +181,28 @@ const button={
 const reservetable={
   position:"absolute",
   fontFamily:"Merkazi",
- 
-   marginLeft:"34rem",
-   marginTop:"23rem"
+  marginLeft:"34rem",
+   marginTop:"23rem",
+   overflow:"hidden",
+   textOverflow:"ellipsis",
+   whiteSpace:"nowrap",
+  
   
 }
-   const avilablet={
+  //  const avilablet={
      
-         marginLeft:"-3rem",
-         paddingTop:"1rem",
-         border:"2px solid red",
-         listStyle:"none",
-         padding:"8rem 9rem",
-         backgroundColor:"#F8B025"
-   }
- const  ulContainer={
-       display:"flex",
-       justifyContent:"center",
+  //        marginLeft:"-3rem",
+  //        paddingTop:"1rem",
+  //        border:"2px solid red",
+  //        listStyle:"none",
+  //        padding:"8rem 9rem",
+  //        backgroundColor:"#F8B025"
+  //  }
+//  const  ulContainer={
+//        display:"flex",
+//        justifyContent:"center",
       
- }
+//  }
 
 return (
   <>
@@ -225,13 +235,16 @@ return (
    type="date" id="res-date"
    style={dateinput}
    onChange={e=>setDate(e.target.value)}
+    required
 />
    
  
 
  
-  <label style={choosetime}>Choose time</label>
+  <label 
+  htmlFor="res-time"style={choosetime}>Select time</label>
  <select id="res-time" 
+
  style={timeinput}
  value={time}
  onChange={e=>setTime(e.target.value)}>
@@ -242,22 +255,28 @@ return (
 
 
  <label 
+  htmlFor="guests"
  style={Numberguest}>Number of guests</label>
  <input 
  type="number" 
- placeholder="1" 
- min="1" max="10"
+ placeholder="0" 
+   min="1" max="10"
   id="guests" 
   style={Numberinput}
   value={guests}
-  onChange={e=>setGuests(e.target.value)}/>
- <label style={Occasion}>Occasion</label>
+  onChange={e=>setGuests(e.target.value)}
+ 
+  required/>
+ <label 
+  htmlFor="occasion"style={Occasion}>Occasion</label>
  <select 
  id="occasion" 
  style={Occasionselect}
  value={occasion}
   onChange={e=>setOccation(e.target.value)}
-  >
+  required
+  >  
+    <option disabled></option>
     <option>Birthday</option>
     <option>Anniversary</option>
  </select> 
@@ -267,8 +286,8 @@ return (
 
 
 
-   <button style={button} 
-   onClick={(()=>props.dispatch({type:"update"}))} >Make Your reservation</button>
+   <button style={button} type="name"  aria-label="On Click"
+   onClick={(()=>props.dispatch({type:"update"}))} disabled={isDisabled}>Make Your reservation</button>
 
 
   {/* <span  type="submit" 
@@ -281,7 +300,10 @@ return (
   </div>
 
 
-    {/* <ConfirmedBooking  /> */}
+  <Routes>
+         <Route path='confirmedBooking' element={<ConfirmedBooking/>}/>
+
+    </Routes>
 
 
   </> 
