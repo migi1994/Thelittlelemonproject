@@ -107,96 +107,96 @@ const [avilableTimes ,dispatch]=useReducer(updateTimes, reducer ,initializeTimes
   
 
   
- const main={ 
-         display:"flex",
-          flexDirection:"column",
-         //   marginTop:"4rem",
-           height:"29rem",
-           backgroundColor:"#495E57"
-     }
-       const image={
+//  const main={ 
+//          display:"flex",
+//           flexDirection:"column",
+//          //   marginTop:"4rem",
+//            height:"29rem",
+//            backgroundColor:"#495E57"
+//      }
+//        const image={
             
-              marginTop:"-17rem",
-              marginLeft:"52rem",
+//               marginTop:"-17rem",
+//               marginLeft:"52rem",
               
-               width:"348px",
-               height:"404px",
+//                width:"348px",
+//                height:"404px",
          
       
-           borderRadius:"30px",
+//            borderRadius:"30px",
 
-       }
-           const littlelemontext={
+//        }
+//            const littlelemontext={
              
           
-                  fontFamily:"Markazi Text",
-                  fontWeight:"Medium",
-                  fontSize:"64px",
-                  color:"#F8C307",
-                  marginLeft:"13rem", 
+//                   fontFamily:"Markazi Text",
+//                   fontWeight:"Medium",
+//                   fontSize:"64px",
+//                   color:"#F8C307",
+//                   marginLeft:"13rem", 
                  
                   
-           }
-           const Chicagotext={
+//            }
+//            const Chicagotext={
                 
-             position:"absolute",
-              top:"8rem",
-               left:"13rem",
-             fontFamily:"Markazi Text",
-             fontWeight:"Medium",
-             fontSize:"40px",
-             color:"white",
+//              position:"absolute",
+//               top:"8rem",
+//                left:"13rem",
+//              fontFamily:"Markazi Text",
+//              fontWeight:"Medium",
+//              fontSize:"40px",
+//              color:"white",
            
            
              
             
             
-       }
-       const  mainparagraph={
-        marginLeft:"13rem",
-        color:"white",
+//        }
+//        const  mainparagraph={
+//         marginLeft:"13rem",
+//         color:"white",
       
-       }
+//        }
 
-         const  mainbutton={
-                 padding : ".5rem  0 .5rem 0",
-                 width:"214px",
-                 height:"68px",
-                borderRadius:"7px",
-                border:"none",
-                backgroundColor:"#FBC307",
-                marginLeft:"13rem",
-                textAlign:"center",
-                marginTop:"2rem",
-                cursor:"Pointer",
+//          const  mainbutton={
+//                  padding : ".5rem  0 .5rem 0",
+//                  width:"214px",
+//                  height:"68px",
+//                 borderRadius:"7px",
+//                 border:"none",
+//                 backgroundColor:"#FBC307",
+//                 marginLeft:"13rem",
+//                 textAlign:"center",
+//                 marginTop:"2rem",
+//                 cursor:"Pointer",
              
              
              
-         }
-         const mainbutton_a= {
-          textDecoration:"none",
-          color:"black"
-         }
+//          }
+//          const mainbutton_a= {
+//           textDecoration:"none",
+//           color:"black"
+//          }
      
 
               
-  return (
+//   return (
 
 
        
-    <div style={main}>
+//     <div style={main}>
       
-       <h2 style={littlelemontext} >Little Lemon</h2>
-       <h5 style={Chicagotext}>Chicago</h5>
-       <p style={mainparagraph}>Lorem ipsum dolor sit amet, consectetur <br/>
-        adipiscing elit, sed do eiusmod tempor incididunt<br/>
-         ut labore et dolore magna aliqua. Ut enim ad minim <br/>
-         veniam, quis nostrud exercitation ullamco laboris nisi<br/>
-          ut aliquip ex ea commodo consequat. Duis aute irure dolor<br/>
-             </p>
+//        <h2 style={littlelemontext} >Little Lemon</h2>
+//        <h5 style={Chicagotext}>Chicago</h5>
+//        <p style={mainparagraph}>Lorem ipsum dolor sit amet, consectetur <br/>
+//         adipiscing elit, sed do eiusmod tempor incididunt<br/>
+//          ut labore et dolore magna aliqua. Ut enim ad minim <br/>
+//          veniam, quis nostrud exercitation ullamco laboris nisi<br/>
+//           ut aliquip ex ea commodo consequat. Duis aute irure dolor<br/>
+//              </p>
     
-     <button style={mainbutton}><a href='/bookingPage' style={mainbutton_a}> Reserve a Table </a></button>
-       <img src={restauranfood} style={image} alt="food"/>
+//      <button style={mainbutton}><a href='/bookingPage' style={mainbutton_a}> Reserve a Table </a></button>
+//        <img src={restauranfood} style={image} alt="food"/>
     
  
           
@@ -205,30 +205,151 @@ const [avilableTimes ,dispatch]=useReducer(updateTimes, reducer ,initializeTimes
         
      
     
-       <Routes>
+//        <Routes>
      
 
             
       
-        <Route path='/bookingPage' element={<BookingPage  
-         avilableTimes={avilableTimes}
-         initializeTimes={initializeTimes}
-         dispatch={dispatch}   />}/>
-          <Route path="/confirmedBooking" element={<ConfirmedBooking 
+//         <Route path='/bookingPage' element={<BookingPage  
+//          avilableTimes={avilableTimes}
+//          initializeTimes={initializeTimes}
+//          dispatch={dispatch}   />}/>
+//           <Route path="/confirmedBooking" element={<ConfirmedBooking 
             
-          />}
+//           />}
           
-     />
+//      />
        
-</Routes>  
+// </Routes>  
     
-    </div>
+//     </div>
 
 
+ ///////////////////////////////////////////////////copy///////////////////////
+
+// const main={ 
+//   display:"flex",
+//    flexDirection:"column",
+//   //   marginTop:"4rem",
+//     height:"29rem",
+//     backgroundColor:"#495E57"
+// }
+// const image={
+     
+//        marginTop:"-17rem",
+//        marginLeft:"52rem",
+       
+//         width:"348px",
+//         height:"404px",
+  
+
+//     borderRadius:"30px",
+
+// }
+//     const littlelemontext={
+      
+   
+//            fontFamily:"Markazi Text",
+//            fontWeight:"Medium",
+//            fontSize:"64px",
+//            color:"#F8C307",
+//            marginLeft:"13rem", 
+          
+           
+//     }
+//     const Chicagotext={
+         
+//       position:"absolute",
+//        top:"8rem",
+//         left:"13rem",
+//       fontFamily:"Markazi Text",
+//       fontWeight:"Medium",
+//       fontSize:"40px",
+//       color:"white",
+    
+    
+      
+     
+     
+// }
+// const  mainparagraph={
+//  marginLeft:"13rem",
+//  color:"white",
+
+// }
+
+//   const  mainbutton={
+//           padding : ".5rem  0 .5rem 0",
+//           width:"214px",
+//           height:"68px",
+//          borderRadius:"7px",
+//          border:"none",
+//          backgroundColor:"#FBC307",
+//          marginLeft:"13rem",
+//          textAlign:"center",
+//          marginTop:"2rem",
+//          cursor:"Pointer",
+      
+      
+      
+//   }
+//   const mainbutton_a= {
+//    textDecoration:"none",
+//    color:"black"
+//   }
  
 
 
+       
+return (
 
+   <div className='hero '>
+
+<div className='container-xl mt-5 d-flex  justify-content-center  ' >
+ <div className='row'>
+  <div className='col-md-6  position-relative   '  style={{ top: 170, }}>
+<h2  className='text-warning fs-xxl' >Little Lemon</h2>
+<h5 className='text-white' >Chicago</h5>
+<p  className='text-white'>Lorem ipsum dolor sit amet, consectetur <br/>
+ adipiscing elit, sed do eiusmod tempor incididunt<br/>
+  ut labore et dolore magna aliqua. Ut enim ad minim <br/>
+  veniam, quis nostrud exercitation ullamco laboris nisi<br/>
+   ut aliquip ex ea commodo consequat. Duis aute irure dolor<br/>
+      </p>
+
+
+<button  className='btn btn-warning text-white '><a href='/bookingPage' className='text-decoration-none text-dark fw-semibold' > Reserve a Table </a></button>
+</div>
+  <div className='col-md-6 mt-5  pe-5'>
+
+<img src={restauranfood}  className='rounded-5 position-relative   '  style={{ top: 70, left:20 }} width={"348px"} alt="food"/>
+</div>
+
+   </div>
+  
+  
+ 
+
+
+<Routes>
+
+
+     
+
+ <Route path='/bookingPage' element={<BookingPage  
+  avilableTimes={avilableTimes}
+  initializeTimes={initializeTimes}
+  dispatch={dispatch}   />}/>
+   <Route path="/confirmedBooking" element={<ConfirmedBooking 
+     
+   />}
+   
+/>
+
+</Routes>  
+
+</div>
+</div>
 
 );
 
