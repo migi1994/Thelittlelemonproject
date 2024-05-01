@@ -306,10 +306,10 @@ return (
    <div className='hero '>
 
 <div className='container-xl mt-5 d-flex  justify-content-center  ' >
- <div className='row'>
-  <div className='col-md-6  position-relative   '  style={{ top: 170, }}>
-<h2  className='text-warning fs-xxl' >Little Lemon</h2>
-<h5 className='text-white' >Chicago</h5>
+ <div className='row gap-5'>
+  <div className='col-md-12 col-sm-12 col-lg-6 position-relative   '  style={{ top: 170, }}>
+<h2  className='text-warning  display-3' >Little Lemon</h2>
+<h5 className=' text-danger  text-warning' >Chicago</h5>
 <p  className='text-white'>Lorem ipsum dolor sit amet, consectetur <br/>
  adipiscing elit, sed do eiusmod tempor incididunt<br/>
   ut labore et dolore magna aliqua. Ut enim ad minim <br/>
@@ -322,12 +322,17 @@ return (
 </div>
   <div className='col-md-6 mt-5  pe-5'>
 
-<img src={restauranfood}  className='rounded-5 position-relative   '  style={{ top: 70, left:20 }} width={"348px"} alt="food"/>
+<img src={restauranfood}  className='rounded-5 position-relative  shadow-lg   hero-image'   style={{ top: 70, left:20 }} width={"348px"} alt="food"/>
 </div>
 
    </div>
   
   
+ 
+
+
+
+
  
 
 

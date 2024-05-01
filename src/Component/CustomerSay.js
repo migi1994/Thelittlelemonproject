@@ -338,80 +338,66 @@ function CustomerSay() {
     
 return (
    < >
-      <div >
-        <h2 >Testimonials</h2>
+      <div  className='Testemonial-container '>
+        <h2 className='mt-5 pt-5 mb-5 pb-5 text-center' id="testmonial" >Testimonials</h2>
      
-         <div className='container ' >
-            <div className='row  '>
-               <div className='col-md-4 '>
-                  <div className='card h-100 '>
+         <div className='container-xl   d-flex justify-content-center ' >
+            <div className='row   'id="testmonial-row" >
+               <div className='col-md-4  d-flex justify-content-center'>
+                  <div className='card shadow-lg h-100   pt-2 ps-3 border-0'id="testmonial-img" style={{width:"12rem"}}>
 
-         <img src={p1} className='h-70 card-img-top'  />
-          <h3 >Christina.J</h3>
+         <img src={p1} className='h-70 card-img-top rounded-circle ms-4  ' style={{height:"100px" , width:"100px"}}  />
+          <h3 className='mt-4' >Christina.J</h3>
           <p >"Lorem ipsum dolor sit amet,<br/>
               consectetur adipiscing elit,"<br/></p>              
-              <div className=' d-flex justify-content-center gap-3' width={20} >
-               <img src={star}/>
-               <img src={star}/>
-               <img src={star}/>
-               <img src={star}/>
-               <img src={star}/>
+              <div className="d-flex justify-content-center pe-3 pb-3"  >
+               <img src={star} style={{width:"25px"}}/>
+               <img src={star} style={{width:"25px"}}/>
+               <img src={star} style={{width:"25px"}}/>
+               <img src={star} style={{width:"25px"}}/>
+               <img src={star} style={{width:"25px"}}/>
                </div>
                </div>
              
                
 </div>
 
-<div className='col-md-4'>
-                  <div className='card h-100  '>
-     <img src={p2} className='h-70 card-img-top'/>
-      <h3 >Thomas.M</h3>
-      <p >"Lorem ipsum dolor sit amet,<br/>
-          consectetur adipiscing elit,"<br/></p>              
-          <div className=' d-flex justify-content-center gap-3' width={20} >
-           <img src={star} />
-           <img src={star}/>
-           <img src={star}/>
-           <img src={star}/>
-           <img src={star}/>
-           </div>
-           </div>
-          
-           
-</div>
 
-<div className='col-md-4'>
-                  <div className='card h-100  '>
-     <img src={p3} className='h-70 card-img-top'/>
-      <h3 >John.S</h3>
+
+<div className='col-md-4 d-flex justify-content-center'>
+                  <div className='card shadow-lg h-100  pt-2 ps-3 border-0 'style={{width:"12rem"}}>
+     <img src={p3} className='h-70 card-img-top rounded-circle ms-4  ' style={{height:"100px" , width:"100px"}} />
+      <h3 className='mt-4'>John.S</h3>
       <p >"Lorem ipsum dolor sit amet,<br/>
           consectetur adipiscing elit,"<br/></p>              
-          <div className=' d-flex justify-content-center gap-3' width={20} >
-           <img src={star}/>
-           <img src={star}/>
-           <img src={star}/>
-           <img src={star}/>
-           <img src={star}/>
-        </div>   
+          <div className="d-flex justify-content-center pe-3"  >
+               <img src={star} style={{width:"25px"}}/>
+               <img src={star} style={{width:"25px"}}/>
+               <img src={star} style={{width:"25px"}}/>
+               <img src={star} style={{width:"25px"}}/>
+               <img src={star} style={{width:"25px"}}/>
+
+               </div>
 
 </div>
 </div>
 
-<div className='col-md-4  '>
-                  <div className='card h-100  ' >
-     <img src={p4} className='h-70  card-img-top'    />
-      <h3 >Chris.A</h3>
+<div className='col-md-4  d-flex justify-content-center '  >
+      <div className='card shadow-lg h-100 border-0 pt-2 ps-3 'style={{width:"12rem"}} >
+     <img src={p4} className='h-70  card-img-top rounded-circle ms-4  ' style={{height:"100px" , width:"100px"}}     />
+      <h3 className='mt-4' >Chris.A</h3>
       <p >"Lorem ipsum dolor sit amet,<br/>
           consectetur adipiscing elit,"<br/></p>              
-          <div className=' d-flex justify-content-center gap-3' width={20} >
-           <img src={star}  />
-           <img src={star}/>
-           <img src={star}/>
-           <img src={star}/>
-           <img src={star}/>
-           </div>
+          <div className="d-flex justify-content-center pe-3"  >
+               <img src={star} style={{width:"25px"}}/>
+               <img src={star} style={{width:"25px"}}/>
+               <img src={star} style={{width:"25px"}}/>
+               <img src={star} style={{width:"25px"}}/>
+               <img src={star} style={{width:"25px"}}/>
+               </div>
           
 </div></div>
+
                </div>
            </div>   
    

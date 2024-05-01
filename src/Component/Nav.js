@@ -31,9 +31,9 @@ import Logo from './images/Rectangle 15.png'
 
   return (
     <>
-    <nav className='navbar navbar-expand-lg fixed-top navbar-dark bg-dark'>
+    <nav className='navbar navbar-expand-lg fixed-top navbar-dark shadow-lg  bg-dark'id="nav-container">
 
-      <div className='container'>
+      <div className='container' >
     <a href='index.html' className='navbar-brand'>
 
 <img src={Logo}  alt="logo"/>

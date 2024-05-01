@@ -1,4 +1,5 @@
 body {
+     overflow-x: hidden;
     display: grid;
     height: 100vh;
     grid-template-rows: auto 1fr auto;
@@ -32,3 +33,131 @@ code {
     background-color:#495e57;
    
   }
+  .Testemonial-container {
+     background-color: #A09999;
+     padding-bottom: 85px;
+  }
+
+  #chicago-bg{
+     background-color: #CBC5C5;
+  }
+
+
+  #chicago-bg h2{
+    font-family: "Caladea";
+    color: #495e57;
+
+  }
+  #testmonial{
+    font-family: "Caladea";
+    color: #283f37;
+  }
+  #footer-bg{
+    display: flex;
+    justify-content: center;
+     color:white;
+     background-color: #070606;
+  }
+  #footer-bg a{
+  
+   text-decoration: none;
+   color:white;
+ 
+ }
+ #footer-bg h4{
+   color:red
+ }
+ .card {
+  display: flex;
+
+  width: 70%;
+
+ }
+ @media(max-width:768px){
+  #testmonial-row{
+    display: flex;
+    gap: 2rem;
+
+    
+  }
+}
+
+
+ @media (max-width:992px){
+
+  .hero .row {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .hero h2{
+        font-size: 150px;
+        margin-bottom: 12rem;
+     
+  }
+    .hero .btn{
+       display: none;
+    }
+    .hero h5{
+        position: relative;
+        bottom: 200px;
+         font-size: 30px;
+         font-weight: bolder;
+
+         
+    }
+.hero p{
+  position: relative;
+     bottom: 190px;
+    width: fit-content;
+     font-size: 30px;
+     background-color: rgba(0, 0, 0, 0.342);
+  
+}
+.hero{
+   background-image: url("Component/images/restauranfood.jpg") ;
+   background-size: cover;
+}
+.hero-image{
+   display: none;
+}
+ 
+ #second_image{
+   display: none;
+  
+}
+#first_image{
+  
+  position: relative;
+  width: 100%;
+    
+     left: 2px;
+   
+
+}
+#chicago-bg{
+    border:12px solid rgb(255, 208, 0)
+}
+#chicago-bg h2{
+   font-size: 100px;
+  position: relative;
+
+   
+}
+#chicago-bg p{
+    font-size: 30px
+}
+#chicago-bg h5{
+  font-size: 30px; 
+}
+#restaurantfood{
+display: none;
+}
+#footer-bg{
+    position: relative;
+     display: flex;
+     justify-content: start;
+        padding-right: 122px;
+}
+}
+

@@ -253,56 +253,61 @@ function Specials() {
 
 return (
 <>
-<h3 >This week Specials</h3> 
+<h3 className='mt-5 pt-5 mb-5 pb-5 text-center'>This week Specials</h3> 
 
- <div className='container  mt-5 pb-5 d-flex justify-content-center'>
-<div className ="row ">
+ <div className='container-xl'id="specials">
+<div className='row' >
 
-<div className ="col-md-4  " >
-  <div className='card h-100  '>
+<div className='col-md-4 col-sm-6 ' >
+  <div className='card h-100'style={{width:"100%"}}>
 
- <img src={greekSalad} className='card-img-top h-50' alt ="greekSalad"/>
-
- <h4 className='pt-5 ps-4' >Greek salad</h4>
-   <h6 className=' ps-4' >$12.99</h6> 
-      <p className=' ps-4' >Lorem ipsum dolor sit amet,<br/>
+ <img src={greekSalad} className='card-img-top h-100'  alt ="greekSalad"/>
+<div className='card-body'>
+ <h4 >Greek salad</h4>
+   <h6 >$12.99</h6> 
+      <p >Lorem ipsum dolor sit amet,<br/>
          consectetur adipiscing elit,<br/>
          sed do eiusmod tempor incididunt<br/>
          
        </p>
-<h5  className=' ps-4'>Order a delivery</h5>
-     <img src={deliveryguy} className='  ps-4 ms-auto position-relative' style={{width:"50px" , bottom:19 , right:12}} alt="deliveryguy" />
+<h5  >Order a delivery</h5>
+     <img src={deliveryguy}style={{width:"25px"}}  />
+     </div>
      </div>
 </div>
-<div className='col-md-4'>
-<div className='card h-100'>
+  
+<div className='col-md-4 col-sm-6 ' >
+<div className='card h-100' style={{width:"100%"}}>
    
-     <img src={card1img} className='card-img-top h-50' style={{width:"100%"}} alt ="bruchetta"   />
+     <img src={card1img} className='card-img-top  h-100 ' />
+     <div className='card-body'>
 
-<h4 className='pt-5 ps-4' >bruchetta</h4>
-  <h6 className=' ps-4' >$5.99</h6> 
-     <p className=' ps-4' >Lorem ipsum dolor sit amet,<br/>
+<h4  >bruchetta</h4>
+  <h6  >$5.99</h6> 
+     <p  >Lorem ipsum dolor sit amet,<br/>
         consectetur adipiscing elit,<br/>
         sed do eiusmod tempor incididunt<br/>
         
       </p> 
-<h5 className=' ps-4' >Order a delivery</h5>
-    <img src={deliveryguy} className=' ps-4 ms-auto position-relative' style={{width:"50px" , bottom:19 , right:12}} alt="deliveryguy" />
+<h5  >Order a delivery</h5>
+    <img src={deliveryguy} style={{width:"25px"}} />
+    </div>
    </div>
     </div>
-    <div className='col-md-4'>
-<div className ="card h-100" >
-<img src={Lemondessert} className='card-img-top h-50' alt="Lemondessert" />
-
-<h4 className='pt-5 ps-4' >lemon dessert</h4>
-  <h6 className=' ps-4' >$5.00</h6> 
-     <p className=' ps-4' >Lorem ipsum dolor sit amet,<br/>
+    <div className='col-md-4 col-sm-6 ' >
+<div className='card h-100' style={{width:"100%"}}>
+<img src={Lemondessert} className='card-img-top  h-100 ' />
+<div className='card-body'>
+<h4 className=''  >lemon dessert</h4>
+  <h6  >$5.00</h6> 
+     <p >Lorem ipsum dolor sit amet,<br/>
         consectetur adipiscing elit,<br/>
         sed do eiusmod tempor incididunt<br/>
         
       </p>
-<h5 className=' ps-4' >Order a delivery</h5>
-    <img src={deliveryguy} className=' ps-4 ms-auto position-relative' style={{width:"50px" , bottom:19 , right:12}} alt="deliveryguy" />
+<h5 >Order a delivery</h5>
+    <img src={deliveryguy} style={{width:"25px"}} />
+    </div>
     </div>
 </div>
    </div>
