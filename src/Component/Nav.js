@@ -33,35 +33,35 @@ import Logo from './images/Rectangle 15.png'
     <>
     <nav className='navbar navbar-expand-lg fixed-top navbar-dark shadow-lg  bg-dark'id="nav-container">
 
-      <div className='container' >
+      <div className='container-xl' >
     <a href='index.html' className='navbar-brand'>
 
 <img src={Logo}  alt="logo"/>
 
 </a>
 
-<button className='navbar-toggler type={"button"} data-bs-toggle={"collapse"} data-bs-target={"#navbarNavDropdown"}'>
+<button className='navbar-toggler ' data-bs-toggle={"collapse"} data-bs-target="#navbarNavDropdown"type="button">
   <span className='navbar-toggler-icon'></span>
 </button>
-<div className='collapse navbar-collapse' id ={"navbarNavDropdown"}>
+<div className='collapse navbar-collapse text-center ' id ={"navbarNavDropdown"}>
   <ul className='navbar-nav ms-auto gap-2'>
 <li className='nav-item'>
-  <a href='#' className='nav-link btn btn-outline-danger border fw-semibold px-4 mx-4 '>Home</a>
+  <Link to="/" className='nav-link btn btn-outline-danger border fw-semibold px-4 mx-4 '>Home</Link>
+</li>
+<li className='nav-item  '>
+  <Link  to="about" className='nav-link fw-semibold '>About</Link>
 </li>
 <li className='nav-item'>
-  <a href='#' className='nav-link fw-semibold '>About</a>
+  <Link  to="/menu" className='nav-link fw-semibold'>Menu</Link>
 </li>
 <li className='nav-item'>
-  <a href='#' className='nav-link fw-semibold'>Menu</a>
+  <Link to ="/bookingpage" className='nav-link fw-semibold'>Reservation</Link>
 </li>
 <li className='nav-item'>
-  <a href='#' className='nav-link fw-semibold'>Reservation</a>
+  <Link to="/Order Online" className='nav-link fw-semibold'>Order Online </Link>
 </li>
 <li className='nav-item'>
-  <a href='#' className='nav-link fw-semibold'>Order Online </a>
-</li>
-<li className='nav-item'>
-  <a href='#' className='nav-link fw-semibold'>Login</a>
+  <Link to ="/" className='nav-link fw-semibold'>Login</Link>
 </li>
 
 

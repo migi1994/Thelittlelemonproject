@@ -97,8 +97,10 @@ function Chicago() {
         </p>
 </div>  
    <div className='col-md-6   d-flex  ' >
-     <img src={MarioandAdrianA} className='mt-5 position-relative rounded-3 shadow-lg  '  id="first_image" style={{top:"42px" , right:"32px"}} width={309} />
-     <img src={restaurantchefB}   className="position-relative rounded-end-5 shadow-lg " id="second_image"  style={{right:"152px"}} width={300} /> 
+     <img src={MarioandAdrianA} className='mt-5 position-relative rounded-3 shadow-lg  '  id="first_image" style={{top:"42px" , right:"32px", opacity:"40%"}} width={309} />
+     <img src={restaurantchefB}   className="position-relative rounded-3 shadow-lg " id="second_image"  style={{right:"292px" ,top:"93px" ,opacity:"60%"}} width={300} height={200} /> 
+     <img src={restaurantchefB}   className="position-relative rounded-3 shadow-lg " id="second_image"  style={{right:"542px" ,top:"63px"}} width={300} height={200} /> 
+     
        </div>
        </div>
         </div>

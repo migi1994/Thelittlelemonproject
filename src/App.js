@@ -19,9 +19,9 @@ import Homepage from './Component/Homepage';
   return (
     <>  
    
-           <Nav/>
+           <Nav />
            <Header/>
-            <Main/>
+             <Main/> 
             <Routes>
             <Route path="/" element={<Homepage />} />
        <Route path="menu" element={ <Specials/> } />

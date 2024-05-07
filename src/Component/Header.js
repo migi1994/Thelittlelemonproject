@@ -15,8 +15,8 @@
           }
       return (
       
-        <div className='container border'>
-          <div className='row'>
+        <div className='container-xl border'>
+          <div className='row mt-5' >
 
        
           <div className='col-md-6 d-flex justify-content-start'>

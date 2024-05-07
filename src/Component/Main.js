@@ -305,17 +305,17 @@ return (
 
    <div className='hero '>
 
-<div className='container-xl mt-5 d-flex  justify-content-center  ' >
- <div className='row gap-5'>
-  <div className='col-md-12 col-sm-12 col-lg-6 position-relative   '  style={{ top: 170, }}>
+<div className='container-xl  mt-5 d-flex  justify-content-center  ' >
+ <div className='row'>
+  <div className=' col-lg-6 position-relative   '  style={{ top: 170, }}>
 <h2  className='text-warning  display-3' >Little Lemon</h2>
 <h5 className=' text-danger  text-warning' >Chicago</h5>
-<p  className='text-white'>Lorem ipsum dolor sit amet, consectetur <br/>
+{/* <p  className='text-white'>Lorem ipsum dolor sit amet, consectetur <br/>
  adipiscing elit, sed do eiusmod tempor incididunt<br/>
   ut labore et dolore magna aliqua. Ut enim ad minim <br/>
   veniam, quis nostrud exercitation ullamco laboris nisi<br/>
    ut aliquip ex ea commodo consequat. Duis aute irure dolor<br/>
-      </p>
+      </p> */}
 
 
 <button  className='btn btn-warning text-white '><a href='/bookingPage' className='text-decoration-none text-dark fw-semibold' > Reserve a Table </a></button>
@@ -336,7 +336,7 @@ return (
  
 
 
-<Routes>
+<Routes className='d-none'>
 
 
      

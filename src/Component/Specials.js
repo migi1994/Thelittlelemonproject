@@ -255,8 +255,8 @@ return (
 <>
 <h3 className='mt-5 pt-5 mb-5 pb-5 text-center'>This week Specials</h3> 
 
- <div className='container-xl'id="specials">
-<div className='row' >
+ <div className='container-xl'>
+<div className='row'id="special-con"  >
 
 <div className='col-md-4 col-sm-6 ' >
   <div className='card h-100'style={{width:"100%"}}>

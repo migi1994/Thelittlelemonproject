@@ -342,7 +342,7 @@ return (
         <h2 className='mt-5 pt-5 mb-5 pb-5 text-center' id="testmonial" >Testimonials</h2>
      
          <div className='container-xl   d-flex justify-content-center ' >
-            <div className='row   'id="testmonial-row" >
+            <div className='row ' id="tst-gap" >
                <div className='col-md-4  d-flex justify-content-center'>
                   <div className='card shadow-lg h-100   pt-2 ps-3 border-0'id="testmonial-img" style={{width:"12rem"}}>
 

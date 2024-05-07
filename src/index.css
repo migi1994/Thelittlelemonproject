@@ -1,4 +1,8 @@
+
+
+
 body {
+      
      overflow-x: hidden;
     display: grid;
     height: 100vh;
@@ -11,6 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -30,15 +35,20 @@ code {
 
 
   .hero{
+     width: auto;
     background-color:#495e57;
    
   }
   .Testemonial-container {
+  
      background-color: #A09999;
      padding-bottom: 85px;
   }
 
+
+
   #chicago-bg{
+    width: auto;
      background-color: #CBC5C5;
   }
 
@@ -73,21 +83,33 @@ code {
   width: 70%;
 
  }
- @media(max-width:768px){
-  #testmonial-row{
-    display: flex;
-    gap: 2rem;
 
+
+ /* #reservation-container{
+  border:1px solid red;
+      position: relative;
+      top:55rem;
+      display: flex;
+       background-color: #283f37;
+       
+     
     
-  }
-}
+      width:100%;
+   
+ }  */
+
+
+
 
 
  @media (max-width:992px){
 
+
   .hero .row {
+       
       display: flex;
       flex-direction: column;
+   
   }
 
   .hero h2{
@@ -95,7 +117,7 @@ code {
         margin-bottom: 12rem;
      
   }
-    .hero .btn{
+   #Reserve-Table-btn{
        display: none;
     }
     .hero h5{
@@ -114,13 +136,14 @@ code {
      background-color: rgba(0, 0, 0, 0.342);
   
 }
-.hero{
+/* .hero{
    background-image: url("Component/images/restauranfood.jpg") ;
    background-size: cover;
-}
+} */
 .hero-image{
    display: none;
 }
+
  
  #second_image{
    display: none;
@@ -144,6 +167,9 @@ code {
 
    
 }
+
+
+
 #chicago-bg p{
     font-size: 30px
 }
@@ -159,5 +185,51 @@ display: none;
      justify-content: start;
         padding-right: 122px;
 }
+#reservation-container h2{
+  font-size: 12px;
+}
 }
 
+ @media(max-width:478px){
+     
+    body{
+        overflow-x: hidden;
+    }
+    .hero h2 {
+        font-size: 4rem;
+    }
+
+  /* #testmonial-row{
+     
+    display: flex;
+    gap: 2rem;
+
+    
+  } */
+  /* #reservation-container{
+     background-color: red;
+     position: relative;
+       right: 15rem;
+      
+   
+     
+  } */
+  #reservation-container h2{
+        font-size: 12px;
+  }
+  /* #reservation-container{
+      position: relative;
+      right: 14rem;
+      width: 30rem;
+  } */
+  #tst-gap{
+    display: flex;
+    gap:15px
+  }
+  #special-con{
+      display: flex ;
+      justify-content: space-around;
+      gap: 40px;
+   
+  }
+ }
