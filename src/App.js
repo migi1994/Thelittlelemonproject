@@ -8,9 +8,11 @@ import { useState } from 'react';
  import Specials from './Component/Specials';
  import CustomerSay from './Component/CustomerSay';
  import Chicago from './Component/Chicago';
+
 import { Routes, Route } from 'react-router-dom';
 
 import Homepage from './Component/Homepage';
+import BookingPage from './Component/BookingPage';
 
  function App() {
  
@@ -22,12 +24,13 @@ import Homepage from './Component/Homepage';
            <Nav />
            <Header/>
              <Main/> 
+           
             <Routes>
             <Route path="/" element={<Homepage />} />
        <Route path="menu" element={ <Specials/> } />
        <Route path="/customerSay" element={ <CustomerSay/>} />  
        <Route path="about" element={<Chicago/>} />
-      
+  
             </Routes>
 
 

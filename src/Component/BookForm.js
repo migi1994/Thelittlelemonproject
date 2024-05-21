@@ -328,7 +328,7 @@ return (
         
         <div  className='container  ' id="reservation-container" >
         <div className='row  '>
-          <div className=' col-lg-12 bg-dark mt-5 position-relative d-flex' style={{top:"49rem"}} >
+          <div className=' col-lg-12 bg-dark mt-5 position-relative d-flex flex-column'  >
  
    <h2 className='text-center mb-5 mt-5 text-white' >RESERVE YOUR TABLE</h2>
 

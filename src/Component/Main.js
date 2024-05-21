@@ -1,4 +1,4 @@
-import React from 'react'
+import  { useState } from 'react'
 import {  useReducer } from 'react'
  import restauranfood from './images/restauranfood.jpg'
  import { Routes , Route } from 'react-router-dom'
@@ -37,8 +37,8 @@ import {  useReducer } from 'react'
   
   
   function updateTimes(){
- 
-
+   
+     
    return [
     '12:30 PM',
      '1:00 PM',
@@ -46,6 +46,9 @@ import {  useReducer } from 'react'
      '3:40 PM',
 
    ]
+
+   
+    
   }
 
   
@@ -302,14 +305,14 @@ const [avilableTimes ,dispatch]=useReducer(updateTimes, reducer ,initializeTimes
 
        
 return (
-
+ 
    <div className='hero '>
 
-<div className='container-xl  mt-5 d-flex  justify-content-center  ' >
+<div className='container-xl  mt-5 d-flex  justify-content-center  '  style={{width:"auto"}} >
  <div className='row'>
   <div className=' col-lg-6 position-relative   '  style={{ top: 170, }}>
-<h2  className='text-warning  display-3' >Little Lemon</h2>
-<h5 className=' text-danger  text-warning' >Chicago</h5>
+<h2  className='text-warning  display-1 position-relative' id="two-text" >Little Lemon</h2>
+<h5 className=' text-danger  text-warning position-relativ' >Chicago</h5>
 {/* <p  className='text-white'>Lorem ipsum dolor sit amet, consectetur <br/>
  adipiscing elit, sed do eiusmod tempor incididunt<br/>
   ut labore et dolore magna aliqua. Ut enim ad minim <br/>
@@ -318,7 +321,7 @@ return (
       </p> */}
 
 
-<button  className='btn btn-warning text-white '><a href='/bookingPage' className='text-decoration-none text-dark fw-semibold' > Reserve a Table </a></button>
+
 </div>
   <div className='col-md-6 mt-5  pe-5'>
 
@@ -333,10 +336,12 @@ return (
 
 
 
+
+
  
 
 
-<Routes className='d-none'>
+<Routes>
 
 
      
@@ -348,6 +353,7 @@ return (
    <Route path="/confirmedBooking" element={<ConfirmedBooking 
      
    />}
+   
    
 />
 

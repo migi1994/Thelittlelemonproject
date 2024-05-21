@@ -84,7 +84,7 @@ function Chicago() {
 
   return (
     <>
-      <div className='   pt-5 pb-5 ' id="chicago-bg">
+      <div className='    pt-5 pb-5 ' id="chicago-bg"  style={{width:"auto"}}>
         <div className='row'>
           <div className='col-md-6  ps-5 '>
      <h2 className='display-1' >Little Lemon</h2>

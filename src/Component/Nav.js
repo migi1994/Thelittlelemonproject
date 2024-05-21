@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from './images/Rectangle 15.png'
-
+import  { useState } from 'react'
  function Nav() {
+  const [noneHeader , setNoneHeader] = useState("home")
   
   //    const  navigation ={
   //        display:"flex",
@@ -27,17 +28,24 @@ import Logo from './images/Rectangle 15.png'
        
   // }
 
-  
+  //  const NoneHeaderhandler=(e)=>{
+  //   e.preventDefault()
+  //    console.log('bye');
+  //     setNoneHeader("good")
+  //   }
 
   return (
+     
+
     <>
+    
     <nav className='navbar navbar-expand-lg fixed-top navbar-dark shadow-lg  bg-dark'id="nav-container">
 
-      <div className='container-xl' >
+      <div className='container-xl '  >
     <a href='index.html' className='navbar-brand'>
 
 <img src={Logo}  alt="logo"/>
-
+ {/* <button onClick={NoneHeaderhandler}>{noneHeader}</button> */}
 </a>
 
 <button className='navbar-toggler ' data-bs-toggle={"collapse"} data-bs-target="#navbarNavDropdown"type="button">
@@ -56,6 +64,7 @@ import Logo from './images/Rectangle 15.png'
 </li>
 <li className='nav-item'>
   <Link to ="/bookingpage" className='nav-link fw-semibold'>Reservation</Link>
+  
 </li>
 <li className='nav-item'>
   <Link to="/Order Online" className='nav-link fw-semibold'>Order Online </Link>
